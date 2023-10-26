@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/background_img.png);
+}
+
+#app {
+  width: 1300px;
+  height: 850px;
+  border: 2px solid black;
+  margin-top: 30px;
+}
+
+.bk-green {
+  color: rgb(0, 150, 136);
+}
+
+.msg-green {
+  color: rgb(213, 249, 186);
+}
+
+.bk-grey {
+  color: rgb(219, 219, 211);
+}
+
+.chatbox-grey {
+  color: rgb(233, 235, 235);
+}
+
+.blue {
+  color: rgb(142, 218, 252);
+}
+
+.container {
+  max-width: 1300px;
+  height: 850px;
+  display: grid;
+  grid-template-rows: 850px;
+  grid-template-columns: 35% 65%;
+}
+
+#contacts {
+  display: grid;
+  grid-template-rows: 95px 95px 60px;
+}
+
+#chatbox {
+  display: grid;
+  grid-template-rows: 95px 660px 95px;
+}
