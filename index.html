@@ -38,11 +38,17 @@
         </div>
 
 
-        <div id="contacts" class="item item-4">
-          <ul>
-            <li v-for="(contact, index) in contacts" :key="index">
-              <img :src="contact.avatar" alt=""> {{
-              contact.name }}
+        <div id="contacts-list" class="item item-4">
+          <ul class="ps-0">
+            <li class="ps-4" v-for="(contact, index) in contacts" :key="index">
+              <div class="d-flex align-items-start">
+                <div class="my-2"><img :src="contact.avatar" alt=""></div>
+                <div>
+                  <div class="fs-4">{{ contact.name }}</div>
+                  <div class="icon-grey">Ultimo messagio inviato</div>
+                </div>
+
+              </div>
             </li>
           </ul>
 

@@ -116,6 +116,16 @@ img {
   color: grey;
 }
 
-#contacts {
+#contacts-list {
   overflow: scroll;
+  background-color: white;
+}
+
+#contacts-list,
+li {
+  border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+li:hover {
+  background-color: rgb(233, 235, 235);
 }
