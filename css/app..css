@@ -61,17 +61,17 @@ li {
 
 #contacts {
   display: grid;
-  grid-template-rows: 95px 95px 60px;
+  grid-template-rows: 60px 60px 50px;
 }
 
 #chatbox {
   display: grid;
-  grid-template-rows: 95px 660px 95px;
+  grid-template-rows: 60px 730px 60px;
 }
 
 img {
   border-radius: 50%;
-  max-width: 80px;
+  max-width: 50px;
   margin-right: 10px;
 }
 
@@ -82,7 +82,11 @@ img {
 }
 
 .name {
-  font-size: 25px;
+  font-size: 18px;
+}
+
+.description {
+  font-size: 12px;
 }
 
 .icons {
@@ -97,7 +101,7 @@ img {
 }
 
 #bell {
-  font-size: 25px;
+  font-size: 15px;
   margin: 0px 25px;
   background-color: white;
   color: rgb(142, 218, 252);
@@ -122,7 +126,7 @@ img {
 
 #contacts-list,
 li {
-  border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgb(128, 128, 128, 0.1);
 }
 
 li:hover {
