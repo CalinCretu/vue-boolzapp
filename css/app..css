@@ -25,6 +25,7 @@ body {
 ul,
 li {
   list-style: none;
+  position: relative;
 }
 
 .bk-green {
@@ -124,6 +125,14 @@ img {
   background-color: white;
 }
 
+.contact-hour {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 10px;
+  color: grey;
+}
+
 #contacts-list,
 li {
   border-bottom: 1px solid rgb(128, 128, 128, 0.1);
@@ -154,8 +163,8 @@ li:hover {
 }
 
 .message {
-  width: 250px;
-  padding: 10px 20px;
+  width: 300px;
+  padding: 20px 20px;
   border-radius: 15px;
   margin: 10px 0px;
 }

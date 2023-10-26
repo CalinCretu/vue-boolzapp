@@ -41,9 +41,10 @@
             <li @click="selectContact(contact, index)" class="ps-4" v-for="(contact, index) in contacts" :key="index">
               <div class="d-flex align-items-start py-1">
                 <div class="my-2"><img :src="contact.avatar" alt=""></div>
-                <div>
+                <div class="contact-info">
                   <div class="name">{{ contact.name }}</div>
                   <div class="icon-grey description">Ultimo messagio inviato</div>
+                  <div class="contact-hour">12:00</div>
                 </div>
               </div>
             </li>
