@@ -36,8 +36,6 @@
           <input type="search" id="form1" class="form-control px-5" placeholder="Cerca o inizia una nuova chat"
             aria-label="Search">
         </div>
-
-
         <div id="contacts-list" class="item item-4">
           <ul class="ps-0">
             <li class="ps-4" v-for="(contact, index) in contacts" :key="index">
@@ -47,20 +45,34 @@
                   <div class="fs-4">{{ contact.name }}</div>
                   <div class="icon-grey">Ultimo messagio inviato</div>
                 </div>
-
               </div>
             </li>
           </ul>
+        </div>
+      </div>
 
+
+
+
+      <div id="chatbox" class="item item-2">
+
+
+
+        <div id="current-chat" class="item item-1 chatbox-grey">
+          <div><img src="./img/avatar_1.jpg" alt=""></div>
+          <div class="flex-grow-1">
+            <div class="name">Michele</div>
+            <div class="icon-grey">Ultimo accesso oggi alle 12:00</div>
+          </div>
+          <div>
+            <span><i class="icons fa-solid fa-circle-notch"></i></span>
+            <span><i class="icons fa-solid fa-message"></i></span>
+            <span><i class="icons fa-solid fa-ellipsis-vertical"></i></span>
+          </div>
         </div>
 
 
 
-
-
-      </div>
-      <div id="chatbox" class="item item-2">
-        <div class="item item-1">immagine contatto || nome contatto || ultimo accesso || 3 icone</div>
         <div class="item item-2">sfondo chat || messaggi inviati e ricevuti</div>
         <div class="item item-3">icona || input testo messaggio || icona</div>
       </div>

@@ -129,3 +129,9 @@ li {
 li:hover {
   background-color: rgb(233, 235, 235);
 }
+
+#current-chat {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
