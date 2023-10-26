@@ -75,7 +75,6 @@ img {
   padding: 0px 10px;
   display: flex;
   align-items: center;
-  border-right: 2px solid rgb(177, 177, 177);
 }
 
 .name {
@@ -86,4 +85,28 @@ img {
   margin: 0px 5px;
   font-size: 20px;
   color: rgb(177, 177, 177);
+}
+
+#notifications {
+  display: flex;
+  align-items: center;
+}
+
+#bell {
+  font-size: 25px;
+  margin: 0px 25px;
+  background-color: white;
+  color: rgb(142, 218, 252);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-glass {
+  position: absolute;
+  left: 30px;
+  color: grey;
 }
