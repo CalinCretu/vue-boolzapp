@@ -64,15 +64,9 @@
             <span><i class="icons fa-solid fa-ellipsis-vertical"></i></span>
           </div>
         </div>
-        <div id="chat" class="item item-2 pt-5">
+        <div v-for="(message, index) in contacts[currentIndex].messages" id="chat" class="item item-2 pt-5">
           <div id="sent-messages" class="d-flex flex-column align-items-end">
-            <div class="message green-msg">Hai portato a spasso il cane?</div>
-          </div>
-          <div id="sent-messages" class="d-flex flex-column align-items-end">
-            <div class="message green-msg">Ricordati di stendere i panni</div>
-          </div>
-          <div id="recieved-messages" class="d-flex flex-column">
-            <div class="message white-msg">Tutto fatto!</div>
+            <div class="message green-msg">{{ message.message }}</div>
           </div>
         </div>
         <div id="msg-input" class="item item-3 d-flex align-items-center px-4">
