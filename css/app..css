@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,600;1,400;1,600&family=Open+Sans:wght@400;700&family=Roboto:ital,wght@0,500;1,300;1,700&family=Salsa&display=swap');
+
 * {
+  font-family: 'Cabin', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Salsa', cursive;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -14,28 +20,31 @@ body {
 #app {
   width: 1300px;
   height: 850px;
-  border: 2px solid black;
   margin-top: 30px;
 }
 
 .bk-green {
-  color: rgb(0, 150, 136);
+  background-color: rgb(0, 150, 136);
 }
 
 .msg-green {
-  color: rgb(213, 249, 186);
+  background-color: rgb(213, 249, 186);
 }
 
 .bk-grey {
-  color: rgb(219, 219, 211);
+  background-color: rgb(219, 219, 211);
 }
 
 .chatbox-grey {
-  color: rgb(233, 235, 235);
+  background-color: rgb(233, 235, 235);
 }
 
 .blue {
-  color: rgb(142, 218, 252);
+  background-color: rgb(142, 218, 252);
+}
+
+.icon-grey {
+  color: rgb(177, 177, 177);
 }
 
 .container {
@@ -54,4 +63,27 @@ body {
 #chatbox {
   display: grid;
   grid-template-rows: 95px 660px 95px;
+}
+
+img {
+  border-radius: 50%;
+  max-width: 80px;
+  margin-right: 10px;
+}
+
+#myProfile {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  border-right: 2px solid rgb(177, 177, 177);
+}
+
+.name {
+  font-size: 25px;
+}
+
+.icons {
+  margin: 0px 5px;
+  font-size: 20px;
+  color: rgb(177, 177, 177);
 }
