@@ -6,6 +6,7 @@ createApp({
   data: () => {
 
     return {
+      currentIndex: '0',
       contacts: [
         {
           name: 'Michele',
@@ -169,6 +170,12 @@ createApp({
           ],
         }
       ]
+    }
+  },
+
+  methods: {
+    selectContact(contact, index) {
+      this.currentIndex = index;
     }
   },
 

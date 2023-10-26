@@ -38,8 +38,8 @@
         </div>
         <div id="contacts-list" class="item item-4">
           <ul class="ps-0">
-            <li class="ps-4" v-for="(contact, index) in contacts" :key="index">
-              <div class="d-flex align-items-start my-1">
+            <li @click="selectContact(contact, index)" class="ps-4" v-for="(contact, index) in contacts" :key="index">
+              <div class="d-flex align-items-start py-1">
                 <div class="my-2"><img :src="contact.avatar" alt=""></div>
                 <div>
                   <div class="name">{{ contact.name }}</div>
@@ -52,9 +52,9 @@
       </div>
       <div id="chatbox" class="item item-2">
         <div id="current-chat" class="item item-1 chatbox-grey">
-          <div><img src="./img/avatar_1.jpg" alt=""></div>
+          <div><img :src="contacts[currentIndex].avatar" alt=""></div>
           <div class="flex-grow-1">
-            <div class="name">Michele</div>
+            <div class="name">{{ contacts[currentIndex].name }}</div>
             <div class="icon-grey description">Ultimo accesso oggi alle 12:00</div>
           </div>
           <div>
@@ -72,27 +72,6 @@
           </div>
           <div id="recieved-messages" class="d-flex flex-column">
             <div class="message white-msg">Tutto fatto!</div>
-          </div>
-          <div id="sent-messages" class="d-flex flex-column align-items-end">
-            <div class="message green-msg">Ricordati di stendere i panni</div>
-          </div>
-          <div id="sent-messages" class="d-flex flex-column align-items-end">
-            <div class="message green-msg">Ricordati di stendere i panni</div>
-          </div>
-          <div id="recieved-messages" class="d-flex flex-column">
-            <div class="message white-msg">Tutto fatto!</div>
-          </div>
-          <div id="recieved-messages" class="d-flex flex-column">
-            <div class="message white-msg">Tutto fatto!</div>
-          </div>
-          <div id="recieved-messages" class="d-flex flex-column">
-            <div class="message white-msg">Tutto fatto!</div>
-          </div>
-          <div id="sent-messages" class="d-flex flex-column align-items-end">
-            <div class="message green-msg">Hai portato a spasso il cane?</div>
-          </div>
-          <div id="sent-messages" class="d-flex flex-column align-items-end">
-            <div class="message green-msg">Ricordati di stendere i panni</div>
           </div>
         </div>
         <div id="msg-input" class="item item-3 d-flex align-items-center px-4">
