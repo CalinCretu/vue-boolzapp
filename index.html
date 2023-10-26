@@ -31,17 +31,28 @@
             <span><a href="">Attiva notifiche desktop</a></span>
           </div>
         </div>
-
-
         <div class="item item-3 d-flex align-items-center chatbox-grey px-3 search-bar">
           <a class="search-glass" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
           <input type="search" id="form1" class="form-control px-5" placeholder="Cerca o inizia una nuova chat"
             aria-label="Search">
         </div>
-        <div class="item item-4">contatti</div>
+
+
+        <div id="contacts" class="item item-4">
+          <ul>
+            <li v-for="(contact, index) in contacts" :key="index">
+              <img :src="contact.avatar" alt=""> {{
+              contact.name }}
+            </li>
+          </ul>
+
+        </div>
+
+
+
+
+
       </div>
-
-
       <div id="chatbox" class="item item-2">
         <div class="item item-1">immagine contatto || nome contatto || ultimo accesso || 3 icone</div>
         <div class="item item-2">sfondo chat || messaggi inviati e ricevuti</div>

@@ -23,6 +23,11 @@ body {
   margin-top: 30px;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 .bk-green {
   background-color: rgb(0, 150, 136);
 }
@@ -109,4 +114,8 @@ img {
   position: absolute;
   left: 30px;
   color: grey;
+}
+
+#contacts {
+  overflow: scroll;
 }
