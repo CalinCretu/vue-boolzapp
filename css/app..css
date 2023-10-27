@@ -17,8 +17,8 @@ body {
 }
 
 #app {
-  width: 1300px;
-  height: 850px;
+  width: 1400px;
+  height: 100%;
   margin-top: 30px;
 }
 
@@ -53,11 +53,15 @@ li {
 }
 
 .container {
-  max-width: 1300px;
-  height: 850px;
+  max-width: 1400px;
+  max-height: 850px;
   display: grid;
-  grid-template-rows: 850px;
+  grid-template-rows: 100%;
   grid-template-columns: 35% 65%;
+}
+
+.active {
+  background-color: rgb(233, 235, 235);
 }
 
 #contacts {

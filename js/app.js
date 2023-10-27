@@ -6,6 +6,7 @@ createApp({
   data: () => {
 
     return {
+      isActive: false,
       currentIndex: '0',
       contacts: [
         {
@@ -176,6 +177,7 @@ createApp({
   methods: {
     selectContact(contact, index) {
       this.currentIndex = index;
+      this.isActive = !this.isActive;
     }
   },
 
