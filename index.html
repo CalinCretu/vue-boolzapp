@@ -11,11 +11,11 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
-<body>
-  <div id="app" class="">
-    <div class="container">
-      <div id="contacts" class="item item-1">
-        <div id="myProfile" class="item item-1 chatbox-grey">
+<body class="d-flex justify-content-center align-items-center">
+  <div id="app" class="d-flex align-items-center">
+    <div class="container d-grid">
+      <div id="contacts" class="item item-1 d-grid">
+        <div id="myProfile" class="item item-1 chatbox-grey d-flex align-items-center">
           <div><img src="img/avatar_io.jpg" alt=""></div>
           <div class="name flex-grow-1">Sofia</div>
           <div>
@@ -24,7 +24,7 @@
             <span><i class="icons fa-solid fa-ellipsis-vertical"></i></span>
           </div>
         </div>
-        <div id="notifications" class="item item-2 blue">
+        <div id="notifications" class="item item-2 blue d-flex align-items-center">
           <i id="bell" class="fa-solid fa-bell-slash"></i>
           <div>
             <span>Ricevi notifiche di nuovi messaggi</span><br>
@@ -33,18 +33,18 @@
         </div>
         <div class="item item-3 d-flex align-items-center chatbox-grey px-3 search-bar">
           <a class="search-glass" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-          <input type="search" id="form1" class="form-control px-5" placeholder="Cerca o inizia una nuova chat"
-            aria-label="Search">
+          <input type="text" id="form1" v-model="search" class="form-control px-5"
+            placeholder="Cerca o inizia una nuova chat" aria-label="Search">
         </div>
         <div id="contacts-list" class="item item-4">
           <ul class="ps-0">
             <li :class="{active:(index==currentIndex)}" @click="selectContact(contact, index)" class="ps-4"
-              v-for="(contact, index) in contacts" :key="index">
+              v-for="(contact, index) in filterList" :key="index">
               <div class="d-flex align-items-start py-1">
                 <div class="my-2"><img :src="contact.avatar" alt=""></div>
                 <div class="contact-info">
                   <div class="name">{{ contact.name }}</div>
-                  <div class="icon-grey description">Ultimo messagio inviato</div>
+                  <div class="icon-grey description">"ultimo messaggio"</div>
                   <div class="contact-hour">12:00</div>
                 </div>
               </div>
@@ -52,8 +52,8 @@
           </ul>
         </div>
       </div>
-      <div id="chatbox" class="item item-2">
-        <div id="current-chat" class="item item-1 chatbox-grey">
+      <div id="chatbox" class="item item-2 d-grid">
+        <div id="current-chat" class="item item-1 chatbox-grey d-flex align-items-center">
           <div><img :src="contacts[currentIndex].avatar" alt=""></div>
           <div class="flex-grow-1">
             <div class="name">{{ contacts[currentIndex].name }}</div>
@@ -66,7 +66,7 @@
           </div>
         </div>
         <div id="chat" class="item item-2 pt-5">
-          <div v-for="(message, index) in contacts[currentIndex].messages" id="sent-messages" class="sent-messages"
+          <div v-for="(message, index) in contacts[currentIndex].messages" class="sent-messages"
             :class="message.status === `sent` ? 'sent-messages' : 'recieved-messages' ">
             <div class="message">
               <div>{{ message.message }}</div>
@@ -85,8 +85,6 @@
       </div>
     </div>
   </div>
-
-
 
   <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
   <script src="js/app.js"></script>

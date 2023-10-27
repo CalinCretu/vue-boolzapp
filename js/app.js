@@ -1,5 +1,3 @@
-console.log('LINKED');
-
 const { createApp } = Vue;
 createApp({
 
@@ -8,6 +6,8 @@ createApp({
     return {
       isActive: false,
       currentIndex: '0',
+      new_sent_message: '',
+      search: '',
       contacts: [
         {
           name: 'Michele',
@@ -173,7 +173,6 @@ createApp({
       ]
     }
   },
-
   methods: {
     selectContact(contact, index) {
       this.currentIndex = index;
@@ -182,12 +181,16 @@ createApp({
     addMessage() {
       this.contacts[this.currentIndex].messages.push({ message: this.new_sent_message, date: "27/10/2023 14:30:35", status: 'sent' });
       this.new_sent_message = "";
+      setTimeout(() => {
+        this.contacts[this.currentIndex].messages.push({ message: "Ok!", date: "27/10/2023 14:30:35", status: 'received' });
+      }, 1000)
     },
   },
-
-  mounted() {
-    console.log('MOUNTED')
-  }
+  computed: {
+    filterList() {
+      return this.contacts.filter(contact => {
+        return contact.name.toLowerCase().includes(this.search.toLowerCase())
+      })
+    },
+  },
 }).mount('#app')
-
-
