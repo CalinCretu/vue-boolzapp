@@ -65,9 +65,6 @@
             <span><i class="icons fa-solid fa-ellipsis-vertical"></i></span>
           </div>
         </div>
-
-
-
         <div id="chat" class="item item-2 pt-5">
           <div v-for="(message, index) in contacts[currentIndex].messages" id="sent-messages" class="sent-messages"
             :class="message.status === `sent` ? 'sent-messages' : 'recieved-messages' ">
@@ -75,19 +72,14 @@
               <div>{{ message.message }}</div>
               <div class="message-date">{{ message.date }}</div>
             </div>
-
-
-
-
           </div>
-
-
-
         </div>
         <div id="msg-input" class="item item-3 d-flex align-items-center px-4">
           <div><i class="icons fs-3 fa-regular fa-face-smile"></i></div>
-          <div class="flex-grow-1 mx-4"><input type="text" class="form-control form-control-md py-2 my-2"
-              placeholder="Scrivi un messaggio"></div>
+          <div class="flex-grow-1 mx-4">
+            <input type="text" class="form-control form-control-md py-2 my-2" placeholder="Scrivi un messaggio"
+              v-model="new_sent_message" @keyUp.enter="addMessage">
+          </div>
           <div><i class="icons fs-3 fa-solid fa-microphone"></i></div>
         </div>
       </div>

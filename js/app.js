@@ -178,7 +178,11 @@ createApp({
     selectContact(contact, index) {
       this.currentIndex = index;
       this.isActive = !this.isActive;
-    }
+    },
+    addMessage() {
+      this.contacts[this.currentIndex].messages.push({ message: this.new_sent_message, date: "27/10/2023 14:30:35", status: 'sent' });
+      this.new_sent_message = "";
+    },
   },
 
   mounted() {
