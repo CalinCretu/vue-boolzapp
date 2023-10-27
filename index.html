@@ -69,7 +69,8 @@
 
 
         <div id="chat" class="item item-2 pt-5">
-          <div v-for="(message, index) in contacts[currentIndex].messages" id="sent-messages" class="sent-messages">
+          <div v-for="(message, index) in contacts[currentIndex].messages" id="sent-messages" class="sent-messages"
+            :class="message.status === `sent` ? 'sent-messages' : 'recieved-messages' ">
             <div class="message">{{ message.message }}</div>
           </div>
 
