@@ -189,17 +189,16 @@ li:hover {
 
 .message {
   width: 300px;
-  padding: 20px 20px;
+  padding: 20px 10px 0px;
   border-radius: 15px;
   margin: 10px 0px;
 }
 
-.white-msg {
-  background-color: white;
-}
-
-.green-msg {
-  background-color: rgb(213, 249, 186);
+.message-date {
+  font-size: 12px;
+  text-align: end;
+  margin-top: 10px;
+  color: grey;
 }
 
 #msg-input {
