@@ -166,6 +166,27 @@ li:hover {
   padding: 0px 80px;
 }
 
+.sent-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.recieved-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.sent-messages>* {
+  background-color: rgb(213, 249, 186);
+}
+
+.recieved-messages>* {
+  background-color: white;
+}
+
+
 .message {
   width: 300px;
   padding: 20px 20px;
