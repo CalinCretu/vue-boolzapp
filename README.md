@@ -13,7 +13,6 @@ Studenti:
 MILESOTNE 1:
 
 - Replicare la grafica dallo screenshot fornito.
-- Scrivere file HTML e CSS.
 
 MILESTONE 2:
 

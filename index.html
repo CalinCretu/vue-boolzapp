@@ -64,8 +64,9 @@
             <span><i class="icons fa-solid fa-ellipsis-vertical"></i></span>
           </div>
         </div>
-        <div v-for="(message, index) in contacts[currentIndex].messages" id="chat" class="item item-2 pt-5">
-          <div id="sent-messages" class="d-flex flex-column align-items-end">
+        <div id="chat" class="item item-2 pt-5">
+          <div v-for="(message, index) in contacts[currentIndex].messages" id="sent-messages"
+            class="d-flex flex-column align-items-end">
             <div class="message green-msg">{{ message.message }}</div>
           </div>
         </div>
