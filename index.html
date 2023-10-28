@@ -38,13 +38,13 @@
         </div>
         <div id="contacts-list" class="item item-4">
           <ul class="ps-0">
-            <li :class="{active:(index==currentIndex)}" @click="selectContact(contact, index)" class="ps-4"
+            <li :class="{active:(index===currentIndex)}" @click="selectContact(contact, index)" class="ps-4"
               v-for="(contact, index) in filterList" :key="index">
               <div class="d-flex align-items-start py-1">
                 <div class="my-2"><img :src="contact.avatar" alt=""></div>
                 <div class="contact-info">
                   <div class="name">{{ contact.name }}</div>
-                  <div class="icon-grey description">"ultimo messaggio"</div>
+                  <div class="icon-grey description">ultimo messaggio del contatto</div>
                   <div class="contact-hour">12:00</div>
                 </div>
               </div>
