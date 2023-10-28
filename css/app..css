@@ -58,6 +58,10 @@ img {
   margin-right: 10px;
 }
 
+img:hover {
+  border: 2px solid rgb(142, 218, 252);
+}
+
 #myProfile {
   padding: 0px 10px;
 }
@@ -74,6 +78,10 @@ img {
   margin: 0px 5px;
   font-size: 20px;
   color: rgb(177, 177, 177);
+}
+
+.icons:hover {
+  color: rgb(142, 218, 252);
 }
 
 #bell {
