@@ -44,8 +44,8 @@
                 <div class="my-2"><img :src="contact.avatar" alt=""></div>
                 <div class="contact-info">
                   <div class="name">{{ contact.name }}</div>
-                  <div class="icon-grey description">ultimo messaggio del contatto</div>
-                  <div class="contact-hour">12:00</div>
+                  <div class="icon-grey description">{{ contact.messages.at(-1).message }}</div>
+                  <div class="contact-hour">{{ contact.messages.at(-1).date.slice(11,16) }}</div>
                 </div>
               </div>
             </li>
@@ -70,7 +70,7 @@
             :class="message.status === `sent` ? 'sent-messages' : 'recieved-messages' ">
             <div class="message">
               <div>{{ message.message }}</div>
-              <div class="message-date">{{ message.date }}</div>
+              <div class="message-date">{{ message.date.slice(11,16) }}</div>
             </div>
           </div>
         </div>
