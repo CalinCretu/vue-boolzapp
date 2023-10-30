@@ -57,7 +57,8 @@
           <div><img :src="contacts[currentIndex].avatar" alt=""></div>
           <div class="flex-grow-1">
             <div class="name">{{ contacts[currentIndex].name }}</div>
-            <div class="icon-grey description">Ultimo accesso oggi alle 12:00</div>
+            <span class="icon-grey description">Ultimo accesso oggi alle </span>
+            <span class="icon-grey description">{{ contacts[currentIndex].messages.at(-1).date.slice(11,16) }}</span>
           </div>
           <div>
             <span><i class="icons fa-solid fa-magnifying-glass"></i></span>
