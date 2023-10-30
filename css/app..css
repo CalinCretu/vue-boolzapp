@@ -166,11 +166,26 @@ li:hover {
 }
 
 .message-date {
-  font-size: 8px;
+  font-size: 10px;
   text-align: end;
   color: grey;
 }
 
 #msg-input {
   background-color: rgb(233, 235, 235);
+}
+
+.drop-down {
+  opacity: 0;
+  margin-left: 10px;
+}
+
+.drop-down:hover {
+  color: rgb(142, 218, 252);
+}
+
+.message:hover {
+  .drop-down {
+    opacity: 70%;
+  }
 }

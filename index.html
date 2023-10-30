@@ -38,7 +38,7 @@
         </div>
         <div id="contacts-list" class="item item-4">
           <ul class="ps-0">
-            <li :class="{active:(index===currentIndex)}" @click="selectContact(contact, index)" class="ps-4"
+            <li :class="{active:(index===currentIndex)} " @click="selectContact(contact, index)" class="ps-4"
               v-for="(contact, index) in filterList" :key="index">
               <div class="d-flex align-items-start py-1">
                 <div class="my-2"><img :src="contact.avatar" alt=""></div>
@@ -54,11 +54,11 @@
       </div>
       <div id="chatbox" class="item item-2 d-grid">
         <div id="current-chat" class="item item-1 chatbox-grey d-flex align-items-center">
-          <div><img :src="contacts[currentIndex].avatar" alt=""></div>
+          <div><img :src="filterList[currentIndex].avatar" alt=""></div>
           <div class="flex-grow-1">
-            <div class="name">{{ contacts[currentIndex].name }}</div>
+            <div class="name">{{ filterList[currentIndex].name }}</div>
             <span class="icon-grey description">Ultimo accesso oggi alle </span>
-            <span class="icon-grey description">{{ contacts[currentIndex].messages.at(-1).date.slice(11,16) }}</span>
+            <span class="icon-grey description">{{ filterList[currentIndex].messages.at(-1).date.slice(11,16) }}</span>
           </div>
           <div>
             <span><i class="icons fa-solid fa-magnifying-glass"></i></span>
@@ -67,10 +67,10 @@
           </div>
         </div>
         <div id="chat" class="item item-2 pt-5">
-          <div v-for="(message, index) in contacts[currentIndex].messages" class="sent-messages"
+          <div v-for="(message, index) in filterList[currentIndex].messages" class="sent-messages"
             :class="message.status === `sent` ? 'sent-messages' : 'recieved-messages' ">
-            <div class="message">
-              <div>{{ message.message }}</div>
+            <div class="message text-end">
+              <div class="msg">{{ message.message }}<i class="fa-solid fa-chevron-down drop-down"></i></div>
               <div class="message-date">{{ message.date.slice(11,16) }}</div>
             </div>
           </div>
