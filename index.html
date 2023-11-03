@@ -38,8 +38,9 @@
         </div>
         <div id="contacts-list" class="item item-4">
           <ul class="ps-0">
-            <li :class="{active:(index===currentIndex)} " @click="selectContact(contact, index)" class="ps-4"
-              v-for="(contact, index) in filterList" :key="index">
+            <li :class="{active:(index===currentIndex)} " @click="selectContact(index)" class="ps-4"
+              v-for="(contact, index) in filterList" :key="index"
+              v-show="contact.name.toLowerCase().includes(search.toLowerCase())">
               <div class="d-flex align-items-start py-1">
                 <div class="my-2"><img :src="contact.avatar" alt=""></div>
                 <div class="contact-info">

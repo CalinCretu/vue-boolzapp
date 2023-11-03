@@ -3,6 +3,9 @@ createApp({
 
   data: () => {
 
+
+
+
     return {
       isActive: false,
       currentIndex: 0,
@@ -174,7 +177,7 @@ createApp({
     }
   },
   methods: {
-    selectContact(contact, index) {
+    selectContact(index) {
       this.currentIndex = index;
       this.isActive = !this.isActive;
     },
@@ -189,6 +192,7 @@ createApp({
   computed: {
     filterList() {
       return this.contacts.filter(contact => {
+        return true;
         return contact.name.toLowerCase().includes(this.search.toLowerCase())
       })
     },
