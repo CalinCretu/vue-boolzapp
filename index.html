@@ -70,7 +70,7 @@
         <div id="chat" class="item item-2 pt-5">
           <div v-for="(message, index) in filterList[currentIndex].messages" class="sent-messages"
             :class="message.status === `sent` ? 'sent-messages' : 'recieved-messages' ">
-            <div class="message text-end">
+            <div class="message text-start">
               <div class="msg">{{ message.message }}<i class="fa-solid fa-chevron-down drop-down"></i></div>
               <div class="message-date">{{ message.date.slice(11,16) }}</div>
             </div>

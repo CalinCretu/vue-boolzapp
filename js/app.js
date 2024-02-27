@@ -2,10 +2,6 @@ const { createApp } = Vue;
 createApp({
 
   data: () => {
-
-
-
-
     return {
       isActive: false,
       currentIndex: 0,
@@ -182,10 +178,10 @@ createApp({
       this.isActive = !this.isActive;
     },
     addMessage() {
-      this.filterList[this.currentIndex].messages.push({ message: this.new_sent_message, date: "27/10/2023 14:30:35", status: 'sent' });
+      this.filterList[this.currentIndex].messages.push({ message: this.new_sent_message, date: "27/10/2023 16:30:35", status: 'sent' });
       this.new_sent_message = "";
       setTimeout(() => {
-        this.filterList[this.currentIndex].messages.push({ message: "Ok!", date: "27/10/2023 14:30:35", status: 'received' });
+        this.filterList[this.currentIndex].messages.push({ message: "Ok!", date: "27/10/2023 16:30:35", status: 'received' });
       }, 1000)
     },
   },
